@@ -1,0 +1,25 @@
+<p>lazy-route-inputs works!</p>
+<span>ID: {{id}}</span>
+
+<ul>
+  @if (list) {
+    @for (item of list; track item.id) {
+      <li>{{item.name}}</li>
+    }
+    @empty {
+      <li>Ain't nothin here bro</li>
+    }
+  }
+  @else {
+    <li>No list at all</li>
+  }
+</ul>
+
+<p>Search: {{search}}</p>
+
+<p style="white-space: pre-wrap; font-family: monospace;">
+  export const appConfig: ApplicationConfig = {{'{'}}
+    providers: [provideRouter(routes, withComponentInputBinding()), provideClientHydration()]
+  {{'}'}};
+</p>
+<p>You also need to escape braces now</p>
