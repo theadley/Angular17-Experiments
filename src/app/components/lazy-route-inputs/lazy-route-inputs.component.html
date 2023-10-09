@@ -19,7 +19,10 @@
 
 <p style="white-space: pre-wrap; font-family: monospace;">
   export const appConfig: ApplicationConfig = {{'{'}}
-    providers: [provideRouter(routes, withComponentInputBinding()), provideClientHydration()]
+  providers: [provideRouter(routes, withComponentInputBinding()), provideClientHydration()]
   {{'}'}};
 </p>
 <p>You also need to escape braces now</p>
+
+<span>Oh look, self-closing, mandatory inputs with aliases and signals</span>
+<app-child-inputs [list]="store.list()" (onNewName)="addName($event)"/>

@@ -59,11 +59,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
   - TS 5.0 support
   - Required inputs
     - `@Input({ required: true }) title: string = '';`
-  - Passing router data as component inputs
+  - [Passing router data as component inputs](https://www.freecodecamp.org/news/use-input-for-angular-route-parameters/)
     - Route data — resolvers and data properties
     - Path parameters
     - Query parameters
-    - Resolve
+    - [Resolvers](https://itnext.io/understanding-angular-resolvers-b49f6c227278)
     - Enabled with `withComponentInputBinding` as part of the `provideRouter`
   - DestroyRef - inject your ngOnDestroy instead of implementing it
     - `destroyRef = inject(DestroyRef);` then;
@@ -74,12 +74,13 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
   -
 - [v17](https://blog.angular.io/meet-angulars-new-control-flow-a02c6eee7843)
   - Signal components - input and output as signals, no zone.js
-  - Control flow `@for item of list; trackBy: field {<p>{{item.field}}</p>} @empty{<p>Nothing in the list</p>}`
-  - Deferred loading
+  - [Control Flow & Deferred Loading](https://github.com/angular/angular/discussions/51241)
+    - `@for item of list; trackBy: field {<p>{{item.field}}</p>} @empty{<p>Nothing in the list</p>}`
+    - [Other Link](https://blog.angular.io/meet-angulars-new-control-flow-a02c6eee7843)
   - Standalone by default
   - SSR by default
   - Partial hydration and router takeover (NextJS style)
-  - New lifecycle hooks for SSR component control (ngOnInit fires on the server)
+  - New [lifecycle hooks](https://blog.herodevs.com/new-in-angular-afternextrender-and-afterrender-51c5d8035693) for SSR component control (ngOnInit fires on the server)
     - `afterNextRender` - after the first render
     - `afterRender` - every render
 - Next

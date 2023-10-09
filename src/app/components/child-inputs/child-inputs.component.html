@@ -1,0 +1,10 @@
+<p>Child input is mandatory and aliased</p>
+<li>
+  @for (item of list(); track item.id) {
+    <li>{{item.name}}</li>
+  }
+  @empty {
+    <li>Ain't nothin here bro</li>
+  }
+</li>
+<button (click)="addName()">Add Name</button>
