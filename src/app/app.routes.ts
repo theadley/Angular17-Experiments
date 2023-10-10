@@ -24,5 +24,13 @@ export const routes: Routes = [
   {
     path: 'typed-forms',
     loadComponent: () => import('./components/typed-forms/typed-forms.component').then(m => m.TypedFormsComponent)
+  },
+  {
+    path: 'cdk-dialog',
+    loadComponent: () => import('./components/cdk-dialog-overview-example/cdk-dialog-overview-example.component').then(m => m.CdkDialogOverviewExample)
+  },
+  {
+    path: 'images',
+    loadComponent: () => import('./components/image-directive/image-directive.component').then(m => m.ImageDirectiveComponent)
   }
 ];

@@ -15,6 +15,8 @@ import {SignalStoreService} from "./services/signal-store.service";
     <a routerLink="/lazy">Load Lazy</a>
     <a routerLink="/lazy/123">Load Lazy ID</a>
     <a routerLink="/typed-forms">Strictly-Typed Forms</a>
+    <a routerLink="/cdk-dialog">CDK Dialog</a>
+    <a routerLink="/images">Image Directive</a>
 
     <ul>
       @for (item of store.list(); track item.id) {
