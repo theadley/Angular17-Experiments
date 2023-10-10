@@ -17,6 +17,7 @@ import {SignalStoreService} from "./services/signal-store.service";
     <a routerLink="/typed-forms">Strictly-Typed Forms</a>
     <a routerLink="/cdk-dialog">CDK Dialog</a>
     <a routerLink="/images">Image Directive</a>
+    <a routerLink="/rxjs">RxJS Interop</a>
 
     <ul>
       @for (item of store.list(); track item.id) {

@@ -32,5 +32,9 @@ export const routes: Routes = [
   {
     path: 'images',
     loadComponent: () => import('./components/image-directive/image-directive.component').then(m => m.ImageDirectiveComponent)
+  },
+  {
+    path: 'rxjs',
+    loadComponent: () => import('./components/rxjs-interop/rxjs-interop.component').then(m => m.RxjsInteropComponent)
   }
 ];

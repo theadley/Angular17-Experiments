@@ -1,0 +1,7 @@
+<p>rxjs-interop works!</p>
+<span>List lengths:</span>
+<ul>
+  <li>Local: {{list.length}}</li>
+  <li>Observable: {{((listObservable$ | async) ?? []).length}}</li>
+  <li>Signal: {{listSignal()?.length ?? 0}}</li>
+</ul>

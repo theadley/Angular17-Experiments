@@ -1,10 +1,11 @@
 import {computed, Injectable, signal, effect} from '@angular/core';
+import {ListEntry} from "../components/models/list";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SignalStoreService {
-  readonly list = signal<{name: string; id: number}[]>([
+  readonly list = signal<ListEntry[]>([
     {
       name: 'One',
       id: 1
