@@ -71,7 +71,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
   - Self-closing tags (OMG finally) ✅
     - `<super-duper-long-component-name [prop]="someVar"/>`
     - This is like apple claiming widgets are a "new concept"
-  -
 - [v17](https://blog.angular.io/meet-angulars-new-control-flow-a02c6eee7843)
   - [Summary](https://twitter.com/Enea_Jahollari/status/1715802499842498605)
   - Signal components - input and output as signals, no zone.js 🕑 (17.1?)

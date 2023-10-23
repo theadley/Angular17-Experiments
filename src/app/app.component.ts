@@ -1,12 +1,12 @@
 import {Component, inject} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {SignalStoreService} from "./services/signal-store.service";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
   template: `
     <div class="navbar bg-base-200 mb-8">
       <div class="flex-1">
@@ -14,19 +14,19 @@ import {SignalStoreService} from "./services/signal-store.service";
       </div>
       <div class="flex-none">
         <ul class="menu menu-horizontal px-1">
-          <li><a routerLink="/typed-forms">Strictly-Typed Forms</a></li>
-          <li><a routerLink="/cdk-dialog">CDK Dialog</a></li>
-          <li><a routerLink="/images">Image Directive</a></li>
-          <li><a routerLink="/rxjs">RxJS Interop</a></li>
+          <li><a routerLink="/typed-forms" routerLinkActive="bg-primary-focus">Strictly-Typed Forms</a></li>
+          <li><a routerLink="/cdk-dialog" routerLinkActive="bg-primary-focus">CDK Dialog</a></li>
+          <li><a routerLink="/images" routerLinkActive="bg-primary-focus">Image Directive</a></li>
+          <li><a routerLink="/rxjs" routerLinkActive="bg-primary-focus">RxJS Interop</a></li>
           <li>
             <details>
               <summary>
                 Loading Strategies
               </summary>
               <ul class="p-2 bg-base-100">
-                <li><a routerLink="/not-lazy">Load Active</a></li>
-                <li><a routerLink="/lazy">Load Lazy</a></li>
-                <li><a routerLink="/lazy/123">Load Lazy ID</a></li>
+                <li><a routerLink="/not-lazy" routerLinkActive="bg-primary-focus">Load Active</a></li>
+                <li><a routerLink="/lazy" routerLinkActive="bg-primary-focus">Load Lazy</a></li>
+                <li><a routerLink="/lazy/123" routerLinkActive="bg-primary-focus">Load Lazy ID</a></li>
               </ul>
             </details>
           </li>
@@ -58,7 +58,7 @@ import {SignalStoreService} from "./services/signal-store.service";
 })
 export class AppComponent {
   protected store = inject(SignalStoreService);
-  title = 'angular-17-test';
+  title = 'Angular 17';
 
   emptyList() {
     this.store.list.set([]);
