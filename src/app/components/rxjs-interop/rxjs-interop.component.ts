@@ -18,6 +18,9 @@ export class RxjsInteropComponent {
   listSignal = toSignal(this.listObservable$);
 
   constructor(store: SignalStoreService) {
+    // e.g. mySignal = toSignal(myNGRXStore.select(myCoolSelector$))
+    // <span>{{mySignal()}}</span>
+
     toObservable(store.list)
       .pipe(
         takeUntilDestroyed()
