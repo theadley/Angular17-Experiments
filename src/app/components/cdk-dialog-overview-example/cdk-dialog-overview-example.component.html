@@ -1,13 +1,20 @@
 <a href="https://material.angular.io/cdk/dialog/overview">Link to Example Docs</a>
 <ol>
   <li>
-    <label id="dialog-user-name">What's your name?</label>
-    <input for="dialog-user-name" [(ngModel)]="name">
+    <label class="label">
+      <span class="label-text">What is your name?</span>
+    </label>
+    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" [(ngModel)]="name" />
   </li>
   <li>
-    <button (click)="openDialog()">Pick one</button>
+    <button class="btn btn-primary" (click)="openDialog()">Pick an animal {{name}}</button>
   </li>
+  @if (animal) {
+    <li>
+      You chose: <em>{{animal}}</em>
+    </li>
+  }
   <li *ngIf="animal">
-    You chose: <em>{{animal}}</em>
+    You chose: <em>{{animal}} (old ngIf)</em>
   </li>
 </ol>

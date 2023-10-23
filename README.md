@@ -73,6 +73,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
     - This is like apple claiming widgets are a "new concept"
   -
 - [v17](https://blog.angular.io/meet-angulars-new-control-flow-a02c6eee7843)
+  - [Summary](https://twitter.com/Enea_Jahollari/status/1715802499842498605)
   - Signal components - input and output as signals, no zone.js 🕑 (17.1?)
   - No more signal mutate ℹ️
   - [Control Flow & Deferred Loading](https://github.com/angular/angular/discussions/51241) ✅
@@ -89,6 +90,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
     - `input = ViewChild<ElementRef>('field'); this.input().nativeElement.focus();`
     - No more `undefined` ref at init
     - [Video](https://www.youtube.com/watch?v=G_OYh0qKTDs&ab_channel=JoshuaMorony)
+  - New list reconciliation algorithm ℹ️
+  - View Transitions API support in Router 🔄
+  - Lazy loading animations code 🔄
 - Next
   - https://github.com/angular/angular/discussions/categories/rfcs
   - https://angular.io/guide/roadmap

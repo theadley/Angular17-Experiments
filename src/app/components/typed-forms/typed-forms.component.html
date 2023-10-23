@@ -1,11 +1,20 @@
-<form [formGroup]="login" (submit)="onSubmit()">
-
-  <label for="email">Email: </label>
-  <input id="email" type="text" formControlName="email">
-
-  <label for="password">Password: </label>
-  <input id="password" type="password" formControlName="password">
-
-  <button>Submit</button>
-
+<form class="card-body" [formGroup]="login" (submit)="onSubmit()">
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Email</span>
+    </label>
+    <input type="email" placeholder="email" class="input input-bordered" required formControlName="email" />
+  </div>
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Password</span>
+    </label>
+    <input type="password" placeholder="password" class="input input-bordered" required formControlName="password" />
+    <label class="label">
+      <a class="label-text-alt link link-hover">Forgot password?</a>
+    </label>
+  </div>
+  <div class="form-control mt-6">
+    <button class="btn btn-primary">Login</button>
+  </div>
 </form>

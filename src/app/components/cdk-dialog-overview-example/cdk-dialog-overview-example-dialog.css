@@ -1,14 +1,15 @@
-:host {
-  display: block;
-  border-radius: 8px;
-  padding: 8px 16px 16px;
-  box-shadow: 0 3px 6px 0 rgba(255,255,255,0.2);
-}
+/*:host {*/
+/*  display: block;*/
+/*  border-radius: 8px;*/
+/*  padding: 8px 16px 16px;*/
+/*  !*background: grey;*!*/
+/*  box-shadow: 0 3px 6px 0 rgba(255,255,255,0.2);*/
+/*}*/
 
-input {
-  margin: 8px 0;
-}
+/*input {*/
+/*  margin: 8px 0;*/
+/*}*/
 
-button + button {
-  margin-left: 8px;
-}
+/*button + button {*/
+/*  margin-left: 8px;*/
+/*}*/

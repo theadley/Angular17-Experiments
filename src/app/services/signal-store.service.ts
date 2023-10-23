@@ -5,7 +5,7 @@ import {ListEntry} from "../components/models/list";
   providedIn: 'root'
 })
 export class SignalStoreService {
-  readonly list = signal<ListEntry[]>([
+  initialValue: ListEntry[] = [
     {
       name: 'One',
       id: 1
@@ -22,7 +22,9 @@ export class SignalStoreService {
       name: 'Four',
       id: 4
     }
-  ]);
+  ];
+
+  readonly list = signal<ListEntry[]>(this.initialValue);
 
   readonly nextId = computed(() => this.list().reduce((previousValue, currentValue) => Math.max(previousValue, currentValue.id), 0) + 1);
 
@@ -31,6 +33,10 @@ export class SignalStoreService {
     // No more mutate - only immutable changes allowed
     // this.list.mutate(list => list.push({name, id: this.nextId()}));
     this.list.update(list => [...list, {name, id: this.nextId()}]);
+  }
+
+  resetList() {
+    this.list.set(this.initialValue);
   }
 
   constructor() {

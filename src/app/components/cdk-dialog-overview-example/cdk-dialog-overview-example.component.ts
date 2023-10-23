@@ -27,7 +27,9 @@ export class CdkDialogOverviewExample {
   openDialog(): void {
     const dialogRef = this.dialog.open<string>(CdkDialogOverviewExampleDialog, {
       width: '250px',
-      data: {name: this.name, animal: this.animal},
+      data: { name: this.name, animal: this.animal },
+      panelClass: ['bg-base-100', 'rounded-xl', 'shadow-lg', 'shadow-white/10', 'p-4', 'prose'],
+      backdropClass: ['backdrop-blur-sm', 'bg-black/50' ]
     });
 
     dialogRef.closed.subscribe(result => {

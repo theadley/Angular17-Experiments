@@ -1,9 +1,11 @@
-<h1>Hi {{data.name}}</h1>
-<div>
-  <label id="favorite-animal">What's your favorite animal?</label>
-  <input for="favorite-animal" [(ngModel)]="data.animal" placeholder="Enter its name">
+<h3 class="mt-0">Hi, {{data.name}}</h3>
+<div class="mb-4">
+  <label class="label">
+    <span class="label-text">What's your favorite animal?</span>
+  </label>
+  <input type="text" placeholder="Enter its name" class="input input-bordered w-full max-w-xs" [(ngModel)]="data.animal" />
 </div>
 <div>
-  <button (click)="dialogRef.close(data.animal)">OK</button>
-  <button (click)="dialogRef.close()">Cancel</button>
+  <button class="btn btn-primary mr-2" (click)="dialogRef.close(data.animal)">OK</button>
+  <button class="btn btn-neutral" (click)="dialogRef.close()">Cancel</button>
 </div>
