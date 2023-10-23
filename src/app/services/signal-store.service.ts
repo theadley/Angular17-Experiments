@@ -28,7 +28,9 @@ export class SignalStoreService {
 
 
   addName(name: string) {
-    this.list.mutate(list => list.push({name, id: this.nextId()}));
+    // No more mutate - only immutable changes allowed
+    // this.list.mutate(list => list.push({name, id: this.nextId()}));
+    this.list.update(list => [...list, {name, id: this.nextId()}]);
   }
 
   constructor() {

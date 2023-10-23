@@ -22,4 +22,5 @@ import {CommonModule, IMAGE_CONFIG, ImageLoaderConfig, NgOptimizedImage} from '@
 export class ImageDirectiveComponent {
   // This is cool
   // https://johnfraney.ca/tools/responsive-image-generator/
+  stringifiedImgTag = `<img ngSrc="assets/img/img.png" alt="Title" fill>`;
 }

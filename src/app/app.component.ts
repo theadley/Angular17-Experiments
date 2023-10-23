@@ -35,7 +35,7 @@ import {SignalStoreService} from "./services/signal-store.service";
 })
 export class AppComponent {
   protected store = inject(SignalStoreService);
-  title = 'angular-17-6-test';
+  title = 'angular-17-test';
 
   emptyList() {
     this.store.list.set([]);

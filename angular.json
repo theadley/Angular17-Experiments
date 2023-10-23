@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-17-6-test": {
+    "angular-17-test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-17-6-test",
+            "outputPath": "dist/angular-17-test",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -35,7 +35,9 @@
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
-            "ssr": "server.ts"
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -65,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-17-6-test:build:production"
+              "buildTarget": "angular-17-test:build:production"
             },
             "development": {
-              "browserTarget": "angular-17-6-test:build:development"
+              "buildTarget": "angular-17-test:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-17-6-test:build"
+            "buildTarget": "angular-17-test:build"
           }
         },
         "test": {
