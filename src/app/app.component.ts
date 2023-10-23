@@ -27,6 +27,7 @@ import {SignalStoreService} from "./services/signal-store.service";
                 <li><a routerLink="/not-lazy" routerLinkActive="bg-primary-focus">Load Active</a></li>
                 <li><a routerLink="/lazy" routerLinkActive="bg-primary-focus">Load Lazy</a></li>
                 <li><a routerLink="/lazy/123" routerLinkActive="bg-primary-focus">Load Lazy ID</a></li>
+                <li><a [routerLink]="['/lazy/', '123']" [queryParams]="{search: 'Tim'}" routerLinkActive="bg-primary-focus">Load Lazy ID & search</a></li>
               </ul>
             </details>
           </li>
@@ -44,7 +45,6 @@ import {SignalStoreService} from "./services/signal-store.service";
           <li>Ain't nothin here bro</li>
         }
       </ul>
-
       <button class="btn btn-accent mr-4" (click)="emptyList()">Clear</button>
       <button class="btn btn-neutral" (click)="resetList()">Reset</button>
     </div>

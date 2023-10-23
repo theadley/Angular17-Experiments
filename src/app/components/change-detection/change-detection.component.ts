@@ -11,5 +11,7 @@ import {FormsModule} from "@angular/forms";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChangeDetectionComponent {
+  // No inputs? How to detect changes?
+  // Angular: Hold my 🍺
   localVariableToBeChecked = '';
 }

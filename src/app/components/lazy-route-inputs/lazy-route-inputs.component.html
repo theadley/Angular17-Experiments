@@ -1,4 +1,4 @@
-<p>lazy-route-inputs works!</p>
+<h3>I'm a lazy component, reading router inputs 💪🤓</h3>
 <span>ID: {{id}}</span>
 
 <ul>
@@ -15,14 +15,20 @@
   }
 </ul>
 
-<p>Search: {{search}}</p>
+@if (search) {
+  <p>Search: <span class="bg-warning text-warning-content">{{search}}</span></p>
+}
 
-<p style="white-space: pre-wrap; font-family: monospace;">
-  export const appConfig: ApplicationConfig = {{'{'}}
-  providers: [provideRouter(routes, withComponentInputBinding()), provideClientHydration()]
-  {{'}'}};
-</p>
-<p>You also need to escape braces now</p>
+<div class="mockup-code">
+  <pre data-prefix="1" class="m-0 p-0"><code>export const appConfig: ApplicationConfig = {{'{'}}</code></pre>
+  <pre data-prefix="2" class="m-0 p-0"><code>  providers: [</code></pre>
+  <pre data-prefix="3" class="m-0 p-0 bg-warning text-warning-content"><code>    provideRouter(routes, withComponentInputBinding()),</code></pre>
+  <pre data-prefix="4" class="m-0 p-0"><code>    provideClientHydration()]</code></pre>
+  <pre data-prefix="5" class="m-0 p-0"><code>  ]</code></pre>
+  <pre data-prefix="6" class="m-0 p-0"><code>{{'}'}};</code></pre>
+</div>
 
-<span>Oh look, self-closing, mandatory inputs with aliases and signals</span>
+<em>P.S. You need to escape braces in your template</em>
+
+<h3>Oh look, self-closing, mandatory inputs with aliases and signals</h3>
 <app-child-inputs [list]="store.list()" (onNewName)="addName($event)"/>
