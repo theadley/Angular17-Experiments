@@ -65,7 +65,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
     - Query parameters
     - [Resolvers](https://itnext.io/understanding-angular-resolvers-b49f6c227278)
     - Enabled with `withComponentInputBinding` as part of the `provideRouter`
-  - DestroyRef - inject your ngOnDestroy instead of implementing it 🔄
+  - DestroyRef - inject your ngOnDestroy instead of implementing it ✅
     - `destroyRef = inject(DestroyRef);` then;
     - `this.destroyRef.onDestroy(() => /* cleanup */ );`
   - Self-closing tags (OMG finally) ✅
