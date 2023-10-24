@@ -16,8 +16,14 @@
   }
 
   <b>Timeout</b>
-  @defer (on timer(2s)) {
-    <span>I load after 2s</span>
+  @defer (on timer(3s)) {
+    <span>I load after 3s</span>
+  } @placeholder {
+    <span>Waiting...</span>
+  } @loading {
+    <span>Loading...</span>
+  } @error {
+    <span>Something went wrong</span>
   }
 
   <b #viewportarget>Viewport</b>
@@ -42,5 +48,11 @@
     @for (comment of comments(); track comment.id) {
       <span>{{comment.content}}</span>
     }
+  }
+
+  <b>Multiple conditions</b>
+  @defer (on idle, timer(8s); when comments().length > 0) {
+    <span>I load for multiple reasons</span>
+    <span>I'm honestly not 100% certain of the AND/OR syntax yet</span>
   }
 </div>
