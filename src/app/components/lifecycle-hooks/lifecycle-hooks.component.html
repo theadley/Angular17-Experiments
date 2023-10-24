@@ -1,0 +1,12 @@
+<h3>Lifecycle messages</h3>
+
+@for (message of messages(); track message) {
+  <div class="chat chat-start">
+    <div class="chat-image avatar">
+      <div class="w-10 rounded-full">
+        <img class="m-0 bg-white/20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png" />
+      </div>
+    </div>
+    <div class="chat-bubble">{{message}}</div>
+  </div>
+}
