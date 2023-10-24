@@ -1,0 +1,50 @@
+<h3>Control Flow</h3>
+
+<a class="btn btn-neutral mr-4" href="https://www.youtube.com/watch?v=77tKyAOFO4o&t=1s&ab_channel=JoshuaMorony">Watch about Control Flow</a>
+<a class="btn btn-neutral mr-4" href="https://www.youtube.com/watch?v=N0yK38MG54c&ab_channel=IgorSedov">Watch about defer</a>
+<a class="btn btn-neutral" href="https://twitter.com/Enea_Jahollari/status/1709138722665517483">Read on 𝕏</a>
+
+<p>
+  Enabled in <em>tsconfig.json</em>
+</p>
+<div class="mockup-code">
+  <pre class="m-0 p-0"><code>{{'{'}}</code></pre>
+  <pre class="m-0 p-0"><code>  ...</code></pre>
+  <pre class="m-0 p-0"><code>  "angularCompilerOptions": {{'{'}}</code></pre>
+  <pre class="m-0 p-0"><code>    ...</code></pre>
+  <pre class="m-0 p-0 bg-warning text-warning-content"><code>    "_enabledBlockTypes": ["if", "for", "switch", "defer"]</code></pre>
+  <pre class="m-0 p-0"><code>  {{'}'}};</code></pre>
+  <pre class="m-0 p-0"><code>{{'}'}};</code></pre>
+</div>
+
+<div class="join join-horizontal my-4">
+  <button [class]="mode === 'if' ? 'btn-primary' : 'btn-neutral'" class="btn join-item" (click)="switchMode('if')">IF</button>
+  <button [class]="mode === 'for' ? 'btn-primary' : 'btn-neutral'" class="btn join-item" (click)="switchMode('for')">FOR</button>
+  <button [class]="mode === 'defer' ? 'btn-primary' : 'btn-neutral'" class="btn join-item" (click)="switchMode('defer')">DEFER</button>
+</div>
+
+<div class="bg-base-100 rounded-2xl p-8 mx-auto flex flex-col gap-4">
+  <span>Switch output:</span>
+  @switch (mode) {
+    @case('if') {
+      <app-if-control/>
+    }
+    @case('for') {
+      <app-for-control/>
+    }
+    @case('defer') {
+      <app-defer-control/>
+    }
+    @default {
+      <span>Something bad happened</span>
+    }
+  }
+</div>
+<!--for-->
+<!--if-->
+<!--switch-->
+<!--defer-->
+<!--defer (on triggers)-->
+<!--defer (when logic)-->
+
+

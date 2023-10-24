@@ -18,6 +18,7 @@ import {SignalStoreService} from "./services/signal-store.service";
           <li><a routerLink="/cdk-dialog" routerLinkActive="bg-primary-focus">CDK Dialog</a></li>
           <li><a routerLink="/images" routerLinkActive="bg-primary-focus">Image Directive</a></li>
           <li><a routerLink="/rxjs" routerLinkActive="bg-primary-focus">RxJS Interop</a></li>
+          <li><a routerLink="/control" routerLinkActive="bg-primary-focus">Control Flow</a></li>
           <li>
             <details>
               <summary>
@@ -25,14 +26,18 @@ import {SignalStoreService} from "./services/signal-store.service";
               </summary>
               <ul class="p-2 bg-base-100">
                 <li><a routerLink="/not-lazy" routerLinkActive="bg-primary-focus">Load Active</a></li>
-                <li><a routerLink="/lazy" routerLinkActive="bg-primary-focus">Load Lazy</a></li>
-                <li><a routerLink="/lazy/123" routerLinkActive="bg-primary-focus">Load Lazy ID</a></li>
-                <li><a [routerLink]="['/lazy/', '123']" [queryParams]="{search: 'Tim'}" routerLinkActive="bg-primary-focus">Load Lazy ID & search</a></li>
+                <li><a routerLink="/lazy" routerLinkActive="bg-primary-focus" [routerLinkActiveOptions]="{exact:true}">Load Lazy</a></li>
+                <li><a routerLink="/lazy/123" routerLinkActive="bg-primary-focus" [routerLinkActiveOptions]="{exact:true}">Load Lazy ID</a></li>
+                <li><a [routerLink]="['/lazy/', '123']" [queryParams]="{search: 'Tim'}" routerLinkActive="bg-primary-focus" [routerLinkActiveOptions]="{exact:true}">Load Lazy ID & search</a></li>
               </ul>
             </details>
           </li>
         </ul>
       </div>
+    </div>
+
+    <div class="bg-base-200 rounded-2xl px-8 py-4 mx-auto mb-4 prose">
+      Angular 17 release date: Nov 6 2023
     </div>
 
     <div class="bg-base-200 rounded-2xl p-8 mx-auto mb-8 prose">

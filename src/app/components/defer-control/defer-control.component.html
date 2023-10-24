@@ -1,0 +1,46 @@
+<div class="flex flex-col gap-2">
+  <h3>Defer block</h3>
+  <h4>Basic defer</h4>
+  @defer{
+    <span>I am deferred until after LCP</span>
+  }
+  <b>Defer on trigger</b>
+  <button class="btn btn-primary" #interaction>Interaction (input, touch, focus, click)</button>
+  @defer (on interaction(interaction)) {
+    <span>I am deferred until interaction</span>
+  }
+
+  <b #hovertarget>Hover</b>
+  @defer (on hover(hovertarget)) {
+    <span>I load on hover</span>
+  }
+
+  <b>Timeout</b>
+  @defer (on timer(2s)) {
+    <span>I load after 2s</span>
+  }
+
+  <b #viewportarget>Viewport</b>
+  @defer (on viewport(viewportarget)) {
+    <span>I load after the above span is in the viewport, not cluttering the DOM</span>
+  }
+
+  <b>Immediate</b>
+  @defer (on immediate) {
+    <span>I load immediately</span>
+  }
+
+  <b>Idle</b>
+  @defer (on idle) {
+    <span>I load when the browser is idle</span>
+  }
+
+  <h4>Defer on logical condition</h4>
+  <b>Comments: {{comments().length}}</b>
+  @defer (when comments().length > 0) {
+    <span>I load when there are more than 0 comments</span>
+    @for (comment of comments(); track comment.id) {
+      <span>{{comment.content}}</span>
+    }
+  }
+</div>

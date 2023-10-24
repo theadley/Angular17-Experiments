@@ -36,5 +36,9 @@ export const routes: Routes = [
   {
     path: 'rxjs',
     loadComponent: () => import('./components/rxjs-interop/rxjs-interop.component').then(m => m.RxjsInteropComponent)
+  },
+  {
+    path: 'control',
+    loadComponent: () => import('./components/control-flow/control-flow.component')
   }
 ];
